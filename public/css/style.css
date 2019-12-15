@@ -123,13 +123,9 @@ h1, h2, h3, h4, h5 {
     text-align: center;
 }
 
-.features {
-    margin: 0.5em;
-    padding: 0.5em;
-}
-
 .features h3 {
     font-size: 3rem;
+    margin-top: 0.2em;
 }
 
 .features hr {
