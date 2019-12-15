@@ -17,14 +17,6 @@ app.get('/', (req, res) =>{
     }
 });
 
-
-
-function randColor(colors) {
-    const rand = Math.floor(Math.random() * colors.length);
-
-    return colors[rand];
-}
-
 client.on('ready', () =>{
     console.log(`Logged on as ${client.user.tag}`);
 })
