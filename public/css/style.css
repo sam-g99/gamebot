@@ -3,6 +3,13 @@
     src: url('../fonts/BebasNeue.otf');
 }
 
+:root {
+    --primary: #142D56;
+    --secondary:  #1B151E;
+    --tertiary: #95033B;
+    --black: #0D0D0D;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +24,7 @@ body, html {
 body {
     width: 100vw;
     height: 100vh;
-    background: #433663;
+    background: var(--secondary);
     position: relative;
 }
 
@@ -32,6 +39,7 @@ h1, h2, h3, h4, h5 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    background: var(--primary);
 }
 
 .top header {
@@ -45,23 +53,41 @@ h1, h2, h3, h4, h5 {
     padding: 0.5em;
 }
 
+.right {
+    width: 50%;
+}
+
+.arcade {
+    width: 100%;
+    object-fit: cover;
+}
+
 .btn {
     border: none;
     outline: none;
     background: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .primary {
-    background: #A58AE8;
+    background: var(--tertiary);
     border-radius: 0.5em;
-    width: 300px;
+    width: 400px;
     font-family: 'Bebas', sans-serif;
     text-transform: capitalize;
     font-size: 3rem;
     display: block;
     text-align: center;
     color: white;
+}
+
+.secondary {
+    background: white;
+    width: 400px;
+    color: var(--tertiary);
 }
 
 .bottom {

@@ -9,16 +9,31 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Game Bot</title>
-    <!--<i class="fab fa-github"></i>-->
-    <!--<i class="fab fa-discord"></i>-->
+    <!--GitHub Icon
+        <i class="fab fa-github"></i>-->
+
+    <!--Disccord Icon
+        <i class="fab fa-discord"></i>-->
 </head>
 <body>
     <section class="top">
         <header>
             <h1>Game Bot</h1>
             <h1>A simple bot for gaming.</h1>
-            <button id="join-server" class="btn primary">Join Server</button>
+            <button id="join-server" class="btn primary">
+                <i class="fab fa-discord"></i>
+                Add to Server
+            </button>
+            <a href="#">
+                <button class="btn secondary">
+                    <i class="fab fa-github"></i>
+                    Contribute
+                </button>
+            </a>
         </header>
+        <div class="right">
+            <img src="./public/images/arcade.png" alt="" class="logo">
+        </div>
     </section>
     <section class="bottom">
         <div class="features">
@@ -26,22 +41,22 @@
             <hr/>
             <div class="feature-section">
                 <div class="card">
+                    <i class="fas fa-database"></i>
                     <h4>GiantBomb API</h4>
                     <p>Plug into the GiantBomb API to retrieve game information.</p>
                 </div>
                 <div class="card">
+                    <i class="fas fa-clipboard"></i>
                     <h4>Reviews & Ratings</h4>
                     <p>See what other gamers think about a specific game title.</p>
                 </div>
                 <div class="card">
+                    <i class="fas fa-photo-video"></i>
                     <h4>Videos & Clips</h4>
                     <p>Get clips and videos of your favorite game and share them with your server.</p>
                 </div>
             </div>
         </div>
     </section>
-    <footer>
-        <a href="https://github.com/aboxofsox/gamebot"><i class="fab fa-github"></i></a>
-    </footer>
 </body>
 </html>
