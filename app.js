@@ -7,7 +7,7 @@
 const {Client, RichEmbed} = require('discord.js'),
 client = new Client(),
 fs = require('fs'),
-config = JSON.parse(fs.readFileSync('config.json')),
+//config = JSON.parse(fs.readFileSync('config.json')),
 prefix = process.env.PREFIX,
 api = require('./core/api.module.js'),
 express = require('express'), //used for the fancy redirect
