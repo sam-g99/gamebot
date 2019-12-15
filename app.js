@@ -8,6 +8,7 @@ const {Client, RichEmbed} = require('discord.js'),
 client = new Client(),
 fs = require('fs'),
 config = JSON.parse(fs.readFileSync('config.json')),
+prefix = process.env.PREFIX,
 api = require('./core/api.module.js'),
 express = require('express'), //used for the fancy redirect
 app = express();
@@ -38,8 +39,8 @@ client.on('ready', () =>{
 })
 
 client.on('message', async msg =>{
-    if(msg.content.indexOf(config.prefix) !== 0) return;
-    const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
+    if(msg.content.indexOf(prefix) !== 0) return;
+    const args = msg.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
     if(command === 'gb') {
@@ -101,7 +102,7 @@ client.on('message', async msg =>{
     }
 });
 
-client.login(process.env.TOKEN || config.TOKEN);
+client.login(process.env.TOKEN|| config.TOKEN);
 
 app.listen(process.env.PORT || 3000, (err) =>{
     if(err) console.log(err);
