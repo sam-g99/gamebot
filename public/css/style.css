@@ -42,7 +42,7 @@ main header .media-container {
     font-size: 8rem;
     display: flex;
     width: 100vw;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
