@@ -46,6 +46,9 @@ main header .media-container {
 }
 
 main header .media-container a {
+    display: block;
+    text-align: center;
+    width: 120px;
     text-decoration: none;
     margin: auto;
     color: white;
