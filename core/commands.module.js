@@ -19,7 +19,6 @@ const randColors = (colors) =>{
 
 module.exports = {
     command: async (client, msg, prefix, RichEmbed) =>{
-        console.log(msg.content);
         if(msg.content.indexOf(prefix) !== 0) return;
 
         const args = msg.content.slice(prefix.length).trim().split(/ +/g);
@@ -46,5 +45,30 @@ module.exports = {
                 .addField('GiantBomb Review', review, true);
             msg.channel.send(embed);
         }
+        if(command === 'gb-r') {
+            const color = randColors(colors);
+            const query = args.join(' ');
+            const rawg = await api.gmrev(query);
+            const embed = new RichEmbed()
+                .setTitle(rawg.results[0].name)
+                .setColor(color)
+                .setImage(rawg.results[0].background_image)
+                .addField('Review Count', rawg.results[0].reviews_count, true)
+                .addField('Score', Math.round(rawg.results[0].score), true)
+                .addField('Rating', `${rawg.results[0].rating}/5`, true);
+            msg.channel.send(embed);
+        }
+        if(command === 'gb-help' || command === 'gb-h') {
+            const color = randColors(colors);
+            const embed = new RichEmbed()
+                .setTitle('Game Bot Commands')
+                .setColor(color)
+                .setDescription('Quickly search a few databases to find everything you need to know about a specific video game.')
+                .addField('General Information', '!gb [query]', true)
+                .addField('Reviews & Ratings', '!gb-r [query]', true)
+                .addField('Clips & Videos', '!gb-v [query]', true);
+            msg.channel.send(embed);
+        }
     }
+        
 }
