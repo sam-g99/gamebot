@@ -1,8 +1,0 @@
-{
-    "prefix" : "!",
-    "GiantBomb" : {
-        "search" : "https://www.giantbomb.com/api/search/",
-        "game" : "https://www.giantbomb.com/api/game/",
-    },
-   
-}
