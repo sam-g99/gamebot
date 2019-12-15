@@ -101,9 +101,9 @@ client.on('message', async msg =>{
     }
 });
 
-client.login(config.TOKEN);
+client.login(process.env.TOKEN || config.TOKEN);
 
-app.listen(env.process.PORT || 3000, (err) =>{
+app.listen(process.env.PORT || 3000, (err) =>{
     if(err) console.log(err);
     console.log(`Listening for redirect`);
 });

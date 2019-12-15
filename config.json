@@ -6,8 +6,5 @@
         "game" : "https://www.giantbomb.com/api/game/",
         "key" : "4a7397b6130e5c5d4ed26a74fbdda25c630c0d46"
     },
-    "igdb" : {
-        "url" : "https://api-v3.igdb.com",
-        "key" : "e4a6ace37891072c7892daafdd121f23"
-    }
+   
 }

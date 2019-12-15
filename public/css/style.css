@@ -2,7 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Cabin', sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    main header {
+        font-size: 1.25rem !important;
+    }
+
+    .btn {
+        font-size: 1rem !important; 
+    }
 }
 
 body {
@@ -21,17 +31,30 @@ main {
     color: white;
 }
 
-main header h1 {
-    font-size: 2rem;
+main header {
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: 2px 2px 5px black;
 }
+
+
 
 .btn {
     border: none;
     outline: none;
-    font-size: 1.25rem;
+    font-size: 2rem;
     padding: 0.5em;
     border-radius: 0.5em;
     background: none;
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+    transition: transform 0.2s linear;
+}
+
+.btn:active {
+    box-shadow: none;
+    transform: translateY(2px);
+    transition: transform 0.2s linear;
 }
 
 .primary {

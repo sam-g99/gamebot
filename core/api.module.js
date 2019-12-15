@@ -14,7 +14,7 @@ module.exports = {
     },
     developers: async (query) =>{
         const url = config.GiantBomb.game;
-        const key = config.GiantBomb.key;
+        const key = process.env.GIANTBOMB || config.GiantBomb.key;
 
         const res = await fetch(`${url}${query}/?api_key=${key}&format=json&fields=developers,publishers`);
         const json = await res.json();
