@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5 {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
     font-size: 4rem;
     color: white;
     padding: 0.5em;
