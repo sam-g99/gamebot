@@ -39,7 +39,7 @@ main header {
 
 main header .media-container {
     margin: 0.5em;
-    font-size: 8rem;
+    font-size: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
