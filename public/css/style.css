@@ -18,6 +18,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: #433663;
+    position: relative;
 }
 
 h1, h2, h3, h4, h5 {
@@ -99,5 +100,18 @@ h1, h2, h3, h4, h5 {
     margin: 0.5em;
     color: white;
     padding: 0.5em;
+}
+
+footer {
+    display: flex;
+    width: 100vw;
+    background: #565261;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
