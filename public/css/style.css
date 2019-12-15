@@ -37,6 +37,22 @@ main header {
     text-shadow: 2px 2px 5px black;
 }
 
+main header .media-container {
+    font-size: 2rem;
+}
+
+main header .media-container a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s ease;
+}
+
+main header .media-container a:hover {
+    color: #9350bf;
+    transition: color 0.2s ease;
+}
+
+
 
 
 .btn {
