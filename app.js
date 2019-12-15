@@ -102,7 +102,7 @@ client.on('message', async msg =>{
     }
 });
 
-client.login(process.env.TOKEN|| config.TOKEN);
+client.login(process.env.TOKEN);
 
 app.listen(process.env.PORT || 3000, (err) =>{
     if(err) console.log(err);

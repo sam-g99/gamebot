@@ -5,7 +5,7 @@ config = JSON.parse(fs.readFileSync('config.json'));
 module.exports = {
     search: async (query) =>{
         const url = config.GiantBomb.search;
-        const key = config.GiantBomb.key;
+        const key = process.env.GIANTBOMB;
 
         const res = await fetch(`${url}?api_key=${key}&format=json&query=${query}&resources=game`);
         const json = await res.json();
@@ -14,7 +14,7 @@ module.exports = {
     },
     developers: async (query) =>{
         const url = config.GiantBomb.game;
-        const key = process.env.GIANTBOMB || config.GiantBomb.key;
+        const key = process.env.GIANTBOMB;
 
         const res = await fetch(`${url}${query}/?api_key=${key}&format=json&fields=developers,publishers`);
         const json = await res.json();
