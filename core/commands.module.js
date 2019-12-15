@@ -18,6 +18,9 @@ const randColors = (colors) =>{
 }
 
 module.exports = {
+    /*
+        If you add a command, add it to "commands.json"
+    */
     command: async (client, msg, prefix, RichEmbed) =>{
         if(msg.content.indexOf(prefix) !== 0) return;
 
