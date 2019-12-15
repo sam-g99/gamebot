@@ -1,9 +1,3 @@
-//TODO: move commands to their own module
-//TODO: fix the shitty variable naming convention.
-//TODO: make db.module actually useful
-//TODO: remove config.json for production (gotta use those ENV variables)
-//TODO: consolidate everything into the general information RichEmbed
-
 const {Client, RichEmbed} = require('discord.js'),
 client = new Client(),
 fs = require('fs'),
@@ -67,26 +61,26 @@ client.on('message', async msg =>{
         let rand = Math.floor(Math.random() * colors.length);
         const query = args.join(' ');
         const rawg = await api.gmrev(query);
-        const rawgembed = new RichEmbed() //FIXME: should be declared the same as the others
+        const embed = new RichEmbed()
             .setTitle(rawg.results[0].name)
             .setColor(colors[rand])
             .setImage(rawg.results[0].background_image)
             .addField('Review Count', rawg.results[0].reviews_count, true)
             .addField('Score', Math.round(rawg.results[0].score), true)
             .addField('Rating', `${rawg.results[0].rating}/5`, true);
-        msg.channel.send(rawgembed);
+        msg.channel.send(embed);
     }
 
     if(command === 'gb-v') {
         let rand = Math.floor(Math.random() * colors.length);
         const query = args.join(' ');
         const rawg = await api.gmrev(query); 
-        const rawgembed = new RichEmbed() //FIXME: should be declared the same as the others
+        const embed = new RichEmbed() 
             .setTitle(`${rawg.results[0].name} Vidoes`)
             .setColor(colors[rand])
             .setThumbnail(rawg.results[0].background_image)
             .addField('Clip', `Video [link](${rawg.results[0].clip.clips.full})`)
-        msg.channel.send(rawgembed);
+        msg.channel.send(embed);
     }
 
     if(command === 'gb-help' || command === 'gb-h') {
