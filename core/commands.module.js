@@ -19,6 +19,7 @@ const randColors = (colors) =>{
 
 module.exports = {
     command: async (client, msg, prefix, RichEmbed) =>{
+        console.log(msg);
         if(msg.content.indexOf(prefix) !== 0) return;
 
         const args = msg.content.slice(prefix.lenght).trim().split(/ +/g);
