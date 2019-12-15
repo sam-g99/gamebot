@@ -45,7 +45,7 @@ module.exports = {
                 .addField('GiantBomb Review', review, true);
             msg.channel.send(embed);
         }
-        if(command === 'gb-r') {
+        if(command === 'gbr') {
             const color = randColors(colors);
             const query = args.join(' ');
             const rawg = await api.gmrev(query);
@@ -58,7 +58,7 @@ module.exports = {
                 .addField('Rating', `${rawg.results[0].rating}/5`, true);
             msg.channel.send(embed);
         }
-        if(command === 'gb-help' || command === 'gb-h') {
+        if(command === 'gbhelp' || command === 'gbh') {
             const color = randColors(colors);
             const embed = new RichEmbed()
                 .setTitle('Game Bot Commands')
