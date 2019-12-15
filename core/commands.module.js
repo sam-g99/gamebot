@@ -44,7 +44,7 @@ module.exports = {
                 .addBlankField()
                 .addField('User Reviews', developers.restuls.number_of_user_reviews, true)
                 .addField('GiantBomb Review', review, true);
-            return msg.channel.send(embed);
+            msg.channel.send(embed);
         }
     }
 }
