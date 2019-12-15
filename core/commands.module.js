@@ -32,7 +32,7 @@ module.exports = {
             const game = await api.search(query);
 
             const developers = await api.developers(game.results[0].guid);
-            const review = `${deverlopers.results.reviews ? developers.results.reviews[0].site_detail_url : 'Not Available'}`;
+            const review = `${developers.results.reviews ? developers.results.reviews[0].site_detail_url : 'Not Available'}`;
 
             const embed = new RichEmbed()
                 .setTitle(game.results[0].name)
