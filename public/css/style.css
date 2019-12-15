@@ -113,5 +113,12 @@ footer {
     left: 0;
     right: 0;
     margin: auto;
+    font-size: 2rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
 }
 
