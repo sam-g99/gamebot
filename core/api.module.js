@@ -1,10 +1,9 @@
 const fetch = require('node-fetch'),
-fs = require('fs'),
-config = JSON.parse(fs.readFileSync('config.json'));
+fs = require('fs');
 
 module.exports = {
     search: async (query) =>{
-        const url = config.GiantBomb.search;
+        const url = `https://www.giantbomb.com/api/search/`;
         const key = process.env.GIANTBOMB;
 
         const res = await fetch(`${url}?api_key=${key}&format=json&query=${query}&resources=game`);
@@ -13,7 +12,7 @@ module.exports = {
         return json;
     },
     developers: async (query) =>{
-        const url = config.GiantBomb.game;
+        const url = `https://www.giantbomb.com/api/game/`;
         const key = process.env.GIANTBOMB;
 
         const res = await fetch(`${url}${query}/?api_key=${key}&format=json&fields=developers,publishers`);
