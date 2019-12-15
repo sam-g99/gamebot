@@ -1,0 +1,18 @@
+{
+    "Info" : {
+        "command" : "!gb",
+        "function" : "Return video game information based on query input."
+    },
+    "Reviews_and_Ratings" : {
+        "command" : "!gbr",
+        "function" : "Return reviews and ratings from RAWG API"
+    },
+    "Clips" :  {
+        "command" : "!gbv",
+        "function" : "Return a few clips from the RAWG API."
+    },
+    "Help" : {
+        "command" : ["!gbh", "!gbhelp"],
+        "function" : "Return a list of available commands."
+    }
+}
