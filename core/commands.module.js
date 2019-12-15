@@ -42,7 +42,7 @@ module.exports = {
                 .addField('Developer', developers.results.developers[0].name, true)
                 .addField('Publisher', developers.results.publishers[0].name, true)
                 .addBlankField()
-                .addField('User Reviews', developers.restuls.number_of_user_reviews, true)
+                .addField('User Reviews', developers.results.number_of_user_reviews, true)
                 .addField('GiantBomb Review', review, true);
             msg.channel.send(embed);
         }
