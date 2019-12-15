@@ -8,7 +8,19 @@ const {Client, RichEmbed} = require('discord.js'),
 client = new Client(),
 fs = require('fs'),
 config = JSON.parse(fs.readFileSync('config.json')),
-api = require('./core/api.module.js');
+api = require('./core/api.module.js'),
+express = require('express'), //used for the fancy redirect
+app = express();
+
+app.use(express.static('public'));
+
+app.get('/', (req, res) =>{
+    if(fs.readFileSync(`${__dirname}/redirect.html`)) {
+        res.sendFile(`${__dirname}/redirect.html`);
+    } else {
+        res.status(404).res.send(`404 Error. Page not found`);
+    }
+});
 
 const colors = [
     'f5ad42',
@@ -90,3 +102,8 @@ client.on('message', async msg =>{
 });
 
 client.login(config.TOKEN);
+
+app.listen(env.process.PORT || 3000, (err) =>{
+    if(err) console.log(err);
+    console.log(`Listening for redirect`);
+});
