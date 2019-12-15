@@ -100,7 +100,13 @@ h1, h2, h3, h4, h5 {
 .secondary {
     background: white;
     width: 400px;
+    border-radius: 0.5em;
     color: var(--tertiary);
+    font-family: 'Bebas', sans-serif;
+    text-transform: capitalize;
+    font-size: 3rem;
+    display: block;
+    text-align: center;
 }
 
 .bottom {
