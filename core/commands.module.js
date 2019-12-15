@@ -22,7 +22,7 @@ module.exports = {
         console.log(msg);
         if(msg.content.indexOf(prefix) !== 0) return;
 
-        const args = msg.content.slice(prefix.lenght).trim().split(/ +/g);
+        const args = msg.content.slice(prefix.length).trim().split(/ +/g);
         const command = args.shift().toLowerCase();
 
         if(command === 'gb') {
