@@ -48,13 +48,12 @@ h1, h2, h3, h4, h5 {
     border: none;
     outline: none;
     background: none;
-    padding: 0.5em;
 }
 
 .primary {
     background: #A58AE8;
     border-radius: 0.5em;
-    width: 225px;
+    width: 300px;
     font-family: 'Bebas', sans-serif;
     text-transform: capitalize;
     font-size: 3rem;
@@ -89,7 +88,7 @@ h1, h2, h3, h4, h5 {
     align-items: center;
     margin: 0.5em;
     padding: 0.5em;
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 .card {
