@@ -4,7 +4,8 @@ fs = require('fs'),
 prefix = process.env.PREFIX,
 api = require('./core/api.module.js'),
 express = require('express'), //used for the fancy redirect
-app = express();
+app = express(),
+cmd = require('./core/commands.module.js');
 
 app.use(express.static('public'));
 
@@ -16,27 +17,29 @@ app.get('/', (req, res) =>{
     }
 });
 
-const colors = [
-    'f5ad42',
-    '42f55d',
-    '42d1f5',
-    '6942f5',
-    'f542dd',
-    'f5427e',
-    'ff6b6b',
-    '6bffc9'
-];
+
+
+function randColor(colors) {
+    const rand = Math.floor(Math.random() * colors.length);
+
+    return colors[rand];
+}
 
 client.on('ready', () =>{
     console.log(`Logged on as ${client.user.tag}`);
 })
 
 client.on('message', async msg =>{
-    if(msg.content.indexOf(prefix) !== 0) return;
-    const args = msg.content.slice(prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
 
-    if(command === 'gb') {
+    cmd.command(client, msg, prefix, RichEmbed);
+    
+
+    /*if(msg.content.indexOf(prefix) !== 0) return;
+    const args = msg.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();*/
+
+
+    /*if(command === 'gb') {
         let rand = Math.floor(Math.random() * colors.length);
         const query = args.join(' ');
         const game = await api.search(query);
@@ -55,9 +58,9 @@ client.on('message', async msg =>{
             .addField('User Reviews', developers.results.number_of_user_reviews, true)
             .addField('GiantBomb Review', review, true)
         msg.channel.send(embed);
-    }
+    }*/
 
-    if(command === 'gb-r') {
+    /*if(command === 'gb-r') {
         let rand = Math.floor(Math.random() * colors.length);
         const query = args.join(' ');
         const rawg = await api.gmrev(query);
@@ -69,9 +72,9 @@ client.on('message', async msg =>{
             .addField('Score', Math.round(rawg.results[0].score), true)
             .addField('Rating', `${rawg.results[0].rating}/5`, true);
         msg.channel.send(embed);
-    }
+    }*/
 
-    if(command === 'gb-v') {
+    /*if(command === 'gb-v') {
         let rand = Math.floor(Math.random() * colors.length);
         const query = args.join(' ');
         const rawg = await api.gmrev(query); 
@@ -81,9 +84,9 @@ client.on('message', async msg =>{
             .setThumbnail(rawg.results[0].background_image)
             .addField('Clip', `Video [link](${rawg.results[0].clip.clips.full})`)
         msg.channel.send(embed);
-    }
+    }*/
 
-    if(command === 'gb-help' || command === 'gb-h') {
+    /*if(command === 'gb-help' || command === 'gb-h') {
         const embed = new RichEmbed()
             .setTitle('Game Bot Commands')
             .setColor(colors[1])
@@ -92,7 +95,7 @@ client.on('message', async msg =>{
             .addField('Reviews & Ratings', '!gb-r [query]', true)
             .addField('Clips & Videos', '!gb-v [query]', true);
         msg.channel.send(embed);
-    }
+    }*/
 });
 
 client.login(process.env.TOKEN);
