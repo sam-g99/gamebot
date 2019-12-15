@@ -48,7 +48,7 @@ main header .media-container {
 
 main header .media-container a {
     text-decoration: none;
-    margin: 0.5em;
+    margin: auto;
     color: white;
     transition: color 0.2s ease;
 }
