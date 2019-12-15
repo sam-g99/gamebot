@@ -59,8 +59,12 @@ h1, h2, h3, h4, h5 {
 
 .top header .call-to-action {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+}
+
+.top header .call-to-action * {
+    margin: 0.5em;
 }
 
 .right {
