@@ -41,7 +41,7 @@ main header .media-container {
     margin: 0.5em;
     font-size: 8rem;
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
     align-items: center;
 }
