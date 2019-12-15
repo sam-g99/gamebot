@@ -123,8 +123,11 @@ h1, h2, h3, h4, h5 {
     text-align: center;
 }
 
-.features h3 {
+.features {
     padding: 0.5em;
+}
+
+.features h3 {
     font-size: 3rem;
 }
 
