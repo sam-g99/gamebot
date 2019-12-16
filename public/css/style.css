@@ -181,8 +181,19 @@ body {
 /* Some responsive thingies */
 
 @media only screen and (max-width: 1010px) {
+
+	h1 {
+		font-size: 2rem;
+	}
 	.top {
 		height: 100vh;
+	}
+
+	.top header {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
 	}
 	.features {
 		height: 100vh;
@@ -203,6 +214,9 @@ body {
 	
 }
 @media only screen and (max-width: 760px) {
+	h1 {
+		font-size: 2rem;
+	}
 	.top {
 		height: 100vh;
 	}
@@ -230,15 +244,14 @@ body {
 }
 
 @media only screen and (max-width: 435px) {
+	h1 {
+		font-size: 2rem;
+	}
 	.top {
 		height: 100vh;
 	}
 	.features {
 		height: 100vh;
-	}
-	h1 {
-		font-size: 45px;
-		margin-top: 15px;
 	}
 	.right, .logo {
 		display: none;
