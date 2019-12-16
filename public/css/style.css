@@ -182,14 +182,34 @@ body {
 /* Some responsive thingies */
 
 @media only screen and (max-width: 1010px) {
+	.top {
+		height: 100vh;
+	}
+	.feature {
+		height: 100vh;
+	}
 	.feature-section {
 		flex-flow: column;
 		align-items: center;
 	}
+	
+	.logo {
+		display: none;
+	}
+	
 }
 @media only screen and (max-width: 760px) {
+	.top {
+		height: 100vh;
+	}
+	.feature {
+		height: 100vh;
+	}
 	h1 {
 		font-size: 70px;
+	}
+	.logo {
+		display: none;
 	}
 
 
@@ -204,9 +224,18 @@ body {
 }
 
 @media only screen and (max-width: 435px) {
+	.top {
+		height: 100vh;
+	}
+	.feature {
+		height: 100vh;
+	}
 	h1 {
 		font-size: 45px;
 		margin-top: 15px;
+	}
+	.logo {
+		display: none;
 	}
 
 	.call-to-action .btn {
