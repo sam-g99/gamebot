@@ -74,7 +74,7 @@ module.exports = {
         }
 
         if(command === 'join') {
-            console.log(`${msg.member.tag} sent a message.`);
+            console.log(`${msg.author.tag} sent a message.`);
         }
     }
         
