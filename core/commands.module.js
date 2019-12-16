@@ -1,4 +1,5 @@
-const api = require('./api.module.js');
+const api = require('./api.module.js'),
+db = require('./db.module.js');
 
 const colors = [
     'f5ad42',
@@ -74,7 +75,10 @@ module.exports = {
         }
 
         if(command === 'join') {
-            console.log(`${msg.author.tag} sent a message.`);
+            const user = msg.author.tag;
+            console.log(`${user} sent a message.`);
+
+            db.save(user);
         }
     }
         
