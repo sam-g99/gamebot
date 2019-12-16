@@ -183,7 +183,7 @@ body {
 @media only screen and (max-width: 1010px) {
 
 	h1 {
-		font-size: 2rem;
+		font-size: 4rem;
 	}
 	.top {
 		height: 100vh;
@@ -208,7 +208,7 @@ body {
 	}
 	.call-to-action .btn {
 		width: 90%;
-		font-size: 25px;
+		font-size: 2rem;
 		height: 60px;
 	}
 	
