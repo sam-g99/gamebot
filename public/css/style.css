@@ -185,7 +185,7 @@ body {
 	.top {
 		height: 100vh;
 	}
-	.feature {
+	.features {
 		height: 100vh;
 	}
 	.feature-section {
@@ -193,7 +193,7 @@ body {
 		align-items: center;
 	}
 	
-	.logo {
+	.right, .logo {
 		display: none;
 	}
 	
@@ -202,13 +202,13 @@ body {
 	.top {
 		height: 100vh;
 	}
-	.feature {
+	.features {
 		height: 100vh;
 	}
 	h1 {
 		font-size: 70px;
 	}
-	.logo {
+	.right, .logo {
 		display: none;
 	}
 
@@ -227,14 +227,14 @@ body {
 	.top {
 		height: 100vh;
 	}
-	.feature {
+	.features {
 		height: 100vh;
 	}
 	h1 {
 		font-size: 45px;
 		margin-top: 15px;
 	}
-	.logo {
+	.right, .logo {
 		display: none;
 	}
 
