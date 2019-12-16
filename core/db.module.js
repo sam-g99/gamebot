@@ -1,7 +1,7 @@
 /*
     Currently I'm using MongoDB. For a few reasons. While SQL may be a much better alternative, in general. MongoDB offers a better way to manipulate data in the form of a JSON. Very little parsing needs to be done to get the data from point A to point B. Though, MongoDB IS scalable, I plan on moving to SQl in the near future.
 */
-
+const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/gamebot' || process.env.DB);
 
         const db = mongoose.connection();
@@ -14,8 +14,6 @@ mongoose.connect('mongodb://localhost:27017/gamebot' || process.env.DB);
             name: {type: String, unique: true}
         });
         const User = mongoose.model('user', userSchema);
-
-const mongoose = require('mongoose');
 
 module.exports = {
     save: (username) =>{
