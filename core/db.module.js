@@ -4,7 +4,7 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/gamebot' || process.env.DB);
 
-        const db = mongoose.connection();
+        const db = mongoose.connection;
 
         db.once('open', () =>{
             console.log(`Connected to the database`);
@@ -13,8 +13,7 @@ mongoose.connect('mongodb://localhost:27017/gamebot' || process.env.DB);
         const userSchema = new mongoose.Schema({
             name: {type: String, unique: true}
         });
-        const User = mongoose.model('user', userSchema);
-
+        const User = mongoose.model('user', userSchema);const mongoose = require('mongoose');
 module.exports = {
     save: (username) =>{
         
