@@ -175,6 +175,10 @@ body {
 	margin-top: 20px;
 }
 
+.card i {
+    font-size: 5.8rem;
+}
+
 /* Some responsive thingies */
 
 @media only screen and (max-width: 1010px) {
@@ -188,21 +192,14 @@ body {
 		font-size: 70px;
 	}
 
-	header p {
-		font-size: 31px;
-	}
 
-	.main-buttons {
+	.call-to-action {
 		flex-flow: column;
 		width: 100%;
 		align-items: center;
 	}
-	.main-buttons .btn {
+	.call-to-action .btn {
 		width: 100%;
-	}
-	.github {
-		margin: 0;
-		margin-top: 10px;
 	}
 }
 @media only screen and (max-width: 500px) {
@@ -216,19 +213,10 @@ body {
 		margin-top: 15px;
 	}
 
-	header p {
-		font-size: 20px;
-	}
-
-	.main-buttons .btn {
+	.call-to-action .btn {
 		width: 90%;
 		font-size: 25px;
 		height: 60px;
 	}
-	.github {
-		margin: 0;
-		margin-top: 10px;
-	}
-.card i {
-    font-size: 5.8rem;
 }
+
