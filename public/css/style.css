@@ -183,7 +183,7 @@ body {
 @media only screen and (max-width: 1010px) {
 
 	h1 {
-		font-size: 4rem;
+		font-size: 8rem;
 	}
 	.top {
 		height: 100vh;
@@ -221,7 +221,7 @@ body {
 }
 @media only screen and (max-width: 760px) {
 	h1 {
-		font-size: 2rem;
+		font-size: 8rem;
 	}
 	.top {
 		height: 100vh;
@@ -251,7 +251,7 @@ body {
 
 @media only screen and (max-width: 435px) {
 	h1 {
-		font-size: 2rem;
+		font-size: 8rem;
 	}
 	.top {
 		height: 100vh;
