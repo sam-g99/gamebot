@@ -196,6 +196,11 @@ body {
 	.right, .logo {
 		display: none;
 	}
+	.call-to-action .btn {
+		width: 90%;
+		font-size: 25px;
+		height: 60px;
+	}
 	
 }
 @media only screen and (max-width: 760px) {
@@ -219,7 +224,9 @@ body {
 		align-items: center;
 	}
 	.call-to-action .btn {
-		width: 100%;
+		width: 90%;
+		font-size: 25px;
+		height: 60px;
 	}
 }
 
