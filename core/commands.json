@@ -14,5 +14,9 @@
     "Help" : {
         "command" : ["!gbh", "!gbhelp"],
         "function" : "Return a list of available commands."
+    },
+    "Testing" : {
+        "command" : "!join",
+        "function" : "Test client.member object."
     }
 }

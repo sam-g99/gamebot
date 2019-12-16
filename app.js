@@ -26,6 +26,9 @@ client.on('message', async msg =>{
     
 });
 
+client.on('guildMemberAdd', member =>{
+    console.log(`${member.user.username} has joined.`)
+});
 client.login(process.env.TOKEN);
 
 app.listen(process.env.PORT || 3000, (err) =>{

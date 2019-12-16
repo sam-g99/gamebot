@@ -72,6 +72,10 @@ module.exports = {
                 .addField('Clips & Videos', '!gb-v [query]', true);
             msg.channel.send(embed);
         }
+
+        if(command === 'join') {
+            console.log(`${msg.author} sent a message.`);
+        }
     }
         
 }
