@@ -34,15 +34,6 @@ body {
 	justify-content: center;
 }
 
-h1 {
-	color: #846bc2;
-	font-size: 80px;
-    	width: 100vw;
-    	height: 100vh;
- 	background: var(--secondary);
-    	position: relative;
-}
-
 header p {
 	font-size: 45px;
 	font-weight: bold;
@@ -81,6 +72,7 @@ header p {
 .top header .header-text {
     display: flex;
     flex-direction: column;
+	color: white;
 }
 
 .top header .call-to-action {
