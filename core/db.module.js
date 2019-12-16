@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.DB, {useNewUrlParser: true, useUnifiedTopology: true}); //FIXME: "MongoNetworkError" probably due to a bad url or related to the url in some way.
+mongoose.connect(process.env.DB, {useNewUrlParser: true, useUnifiedTopology: true}); //FIXME: "MongoNetworkError" (see error log)
 
 const db = mongoose.connection;
 
