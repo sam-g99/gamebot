@@ -206,6 +206,12 @@ body {
 	.right, .logo {
 		display: none;
 	}
+
+	.call-to-action {
+		flex-flow: column;
+		width: 100%;
+		align-items: center;
+	}
 	.call-to-action .btn {
 		width: 90%;
 		font-size: 2rem;
