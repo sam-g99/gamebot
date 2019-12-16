@@ -1,3 +1,16 @@
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('../fonts/BebasNeue.otf');
+}
+
+:root {
+    --primary: #142D56;
+    --secondary:  #1B151E;
+    --tertiary: #95033B;
+    --black: #0D0D0D;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -24,6 +37,10 @@ body {
 h1 {
 	color: #846bc2;
 	font-size: 80px;
+    width: 100vw;
+    height: 100vh;
+    background: var(--secondary);
+    position: relative;
 }
 
 header p {
@@ -38,6 +55,12 @@ header p {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: flex-start;
+    background: var(--primary);
+    overflow: hidden;
 }
 
 .top header {
@@ -53,6 +76,31 @@ header p {
 	flex-flow: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.top header .header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.top header .call-to-action {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.top header .call-to-action * {
+    margin: 0.5em;
+}
+
+.right {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.logo {
+    width: 400px;
 }
 
 .btn {
@@ -101,6 +149,37 @@ header p {
 	color: black;
 	text-decoration: none;
 	text-align: center;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary {
+    background: var(--tertiary);
+    border-radius: 0.5em;
+    width: 400px;
+    font-family: 'Bebas', sans-serif;
+    text-transform: capitalize;
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+.secondary {
+    background: white;
+    width: 400px;
+    border-radius: 0.5em;
+    color: var(--tertiary);
+    font-family: 'Bebas', sans-serif;
+    text-transform: capitalize;
+    font-size: 3rem;
+    display: block;
+    text-align: center;
 }
 
 .bottom {
@@ -116,6 +195,8 @@ header p {
 .features h3 {
 	font-size: 35px;
 	font-weight: 400;
+    font-size: 3rem;
+    margin-top: 0.2em;
 }
 
 .features hr {
@@ -231,4 +312,6 @@ footer a {
 		margin: 0;
 		margin-top: 10px;
 	}
+.card i {
+    font-size: 5.8rem;
 }
