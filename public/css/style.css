@@ -202,11 +202,7 @@ body {
 		width: 100%;
 	}
 }
-@media only screen and (max-width: 500px) {
-	header p {
-		font-size: 25px;
-	}
-}
+
 @media only screen and (max-width: 435px) {
 	h1 {
 		font-size: 45px;
