@@ -31,11 +31,10 @@ module.exports = {
         const promise = query.exec();
         const data = promise.then((res) =>{
             res.forEach((e) =>{
-                console.log(e.library);
                 return e.library;
             });
         });
-
+        console.log(data);
         return data;
 
         
