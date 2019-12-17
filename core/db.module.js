@@ -28,7 +28,7 @@ module.exports = {
     },
     fetchLib: async (username) =>{
         const query = await User.findOne({name: username}).select('library').lean().exec();
-        console.log(query);
+        //console.log(query);
 
         return query;
                
@@ -46,7 +46,7 @@ module.exports = {
             favorite: favorite
         }, (err) => {
             if(err) console.error(err);
-            console.llg(`${username} has updated their favorite game`);
+            console.log(`${username} has updated their favorite game`);
         });
     }
 }
