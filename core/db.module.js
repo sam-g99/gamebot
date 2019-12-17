@@ -10,7 +10,9 @@ db.once('open', () =>{
 });
 
 const userSchema = new mongoose.Schema({
-    name: {type: String, unique: true}
+    name: {type: String, unique: true},
+    library: Array,
+    favorite: String
 });
 const User = mongoose.model('user', userSchema);
 
