@@ -5,6 +5,7 @@ api = require('./api.module.js');
 module.exports = {
     add: async (username, query) =>{
         let data = db.fetchLib(username);
+        console.log(data);
         let library = [];
 
         console.log(data);
@@ -16,9 +17,7 @@ module.exports = {
             title: res.results[0].name,
             image: res.results[0].image.small_url
         };
-
-        library.push(game);
         
-        db.lib(username, library);
+        db.lib(username, data);
     }
 }
