@@ -28,8 +28,6 @@ module.exports = {
     },
     fetchLib: async (username) =>{
         const query = await User.findOne({name: username}).select('library').lean().exec();
-        //console.log(query);
-
         return query;
                
     },

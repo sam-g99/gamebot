@@ -99,13 +99,11 @@ module.exports = {
 
             library.forEach(e => games.push(e.title));
 
-            
             const embed = new RichEmbed()
                 .setTitle(`${msg.author.username}'s Library`)
                 .setColor(randColors(colors))
                 .addField(`Games`, games.join('\n'), true);
            
-
             msg.channel.send(embed);
 
         }
