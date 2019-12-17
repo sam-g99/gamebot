@@ -96,7 +96,7 @@ module.exports = {
             const library = await lib.share(msg.author.username);
             console.log(library);
 
-            //msg.channel.send(library);
+            msg.channel.send(library);
 
         }
 
