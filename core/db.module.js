@@ -30,7 +30,7 @@ module.exports = {
         const query = User.find({name: username});
         const promise = query.exec();
         const lib = await promise.then((res) =>{
-            console.log(res);
+            //console.log(res);
 
             res.forEach((e) =>{
                 return e.library
@@ -38,9 +38,7 @@ module.exports = {
             
         });
 
-        console.log(lib);
-        
-
+        //console.log(lib);
         
         return lib;
         
