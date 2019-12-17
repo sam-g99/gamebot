@@ -23,7 +23,7 @@ module.exports = {
         
         db.lib(username, library);
     },
-    share: (username) =>{
+    share: asyn (username) =>{
         let data = await db.fetchLib(username);
         let library = data.library;
 
