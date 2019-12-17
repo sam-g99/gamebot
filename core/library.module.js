@@ -5,7 +5,10 @@ api = require('./api.module.js');
 module.exports = {
     add: async (username, query) =>{
         let data = await db.fetchLib(username);
-        console.log(data.json() || JSON.parse(data));
+
+        data.then((res) =>{
+            console.log(res);
+        });
         
         let library = [];
 
