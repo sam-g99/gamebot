@@ -8,18 +8,20 @@ module.exports = {
         console.log(data.library);
         
         
-        let library = [];
+        let library = data.library;
 
         //console.log(data);
 
         const res = await api.search(query);
-        //const json = await res.json();
+        const json = await res.json();
 
         const game = {
             title: res.results[0].name,
             image: res.results[0].image.small_url
         };
+
+        library.push(game);
         
-        //db.lib(username, data);
+        db.lib(username, library);
     }
 }
