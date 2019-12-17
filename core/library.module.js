@@ -4,7 +4,7 @@ api = require('./api.module.js');
 
 module.exports = {
     add: async (username, query) =>{
-        let data = await db.fetchLib(username);
+        let data = db.fetchLib(username);
 
         data.then((res) =>{
             console.log(res);
