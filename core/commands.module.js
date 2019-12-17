@@ -94,6 +94,7 @@ module.exports = {
 
         if(command === 'gb-share') {
             msg.channel.send('Check the console.'); 
+            lib.share(msg.author.username);
         }
 
         
