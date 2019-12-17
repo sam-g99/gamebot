@@ -51,6 +51,8 @@ module.exports = {
             msg.channel.send(embed).then(message =>{
                 message.react('👍');
                 message.react('👎');
+                message.react('💓');
+                message.react('😠');
             });
         }
         if(command === 'gbr') {
