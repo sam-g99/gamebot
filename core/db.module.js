@@ -29,7 +29,7 @@ module.exports = {
     fetchLib: (username) =>{
         const query = User.find({name: username});
         const promise = query.exec();
-        const lib = promise.then((res) =>{
+        const lib = await promise.then((res) =>{
             console.log(res);
 
             res.forEach((e) =>{
