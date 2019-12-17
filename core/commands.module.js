@@ -76,10 +76,10 @@ module.exports = {
         }
 
         if(command === 'gb-create') {
-            const user = msg.author.tag;
+            const user = msg.author.username;
             console.log(`${user} sent a message.`);
 
-            msg.channel.reply('You have been added to the database. Use !gb-add to add a game.');
+            msg.channel.send('You have been added to the database. Use !gb-add to add a game.');
 
             db.save(user);
         }
@@ -88,7 +88,7 @@ module.exports = {
 
             const query = args.join(' ');
 
-            lib.add(msg.author.tag, query);
+            lib.add(msg.author.username, query);
         }
 
         
