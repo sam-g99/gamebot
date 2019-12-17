@@ -24,6 +24,13 @@ client.on('ready', () =>{
 
 client.on('message', async msg =>{
     cmd.command(client, msg, prefix, RichEmbed);
+
+    if(msg.embeds > 0) {
+        msg.react('👍')
+            .then(() => msg.react('👎'))
+            .then(() =>{msg.react('👌')})
+            .catch(() => console.log('Emoji failure'));
+    }
     
 });
 
