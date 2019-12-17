@@ -97,7 +97,6 @@ module.exports = {
 
             msg.channel.send(library);
 
-            
         }
 
         
