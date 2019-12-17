@@ -98,9 +98,14 @@ module.exports = {
             library.forEach((e) =>{
                 console.log(e.title);
             });
+
+            const embed = new RichEmbed()
+                .setTitle(`${msg.author.username}'s Library`)
+                .setColor(randColors(colors))
+                .addField(`Games`, `${library.forEach(e => e.title)}`, true);
            
 
-            //msg.channel.send(json);
+            msg.channel.send(embed);
 
         }
 
