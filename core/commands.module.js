@@ -95,14 +95,12 @@ module.exports = {
         if(command === 'gb-share') {
             const library = await lib.share(msg.author.username);
 
-            library.forEach((e) =>{
-                console.log(e.title);
-            });
+            
 
             const embed = new RichEmbed()
                 .setTitle(`${msg.author.username}'s Library`)
                 .setColor(randColors(colors))
-                .addField(`Games`, `${library.forEach(e => e)}`, true);
+                .addField(`Games`, `${library.forEach(e => e.toString())}`, true);
            
 
             msg.channel.send(embed);
