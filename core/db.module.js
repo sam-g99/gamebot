@@ -21,5 +21,25 @@ module.exports = {
             if(err) return console.error(err);
             console.log(`Saved ${username} to database.`);
         });
+    },
+    fetchLib: (username) =>{
+        const data = User.find({name: username});
+        return data;
+    },
+    lib: (username, library) =>{
+        User.update({name: username}, {
+            library: library,
+        }, (err) =>{
+            if(err) console.error(err);
+            console.log(`${username} has updated their library`);
+        });
+    },
+    fave: (username, favorite) =>{
+        User.update({name: username}, {
+            favorite: favorite
+        }, (err) => {
+            if(err) console.error(err);
+            console.llg(`${username} has updated their favorite game`);
+        });
     }
 }

@@ -1,5 +1,6 @@
 const api = require('./api.module.js'),
-db = require('./db.module.js');
+db = require('./db.module.js'),
+lib = require('./library.module.js');
 
 const colors = [
     'f5ad42',
@@ -74,12 +75,23 @@ module.exports = {
             msg.channel.send(embed);
         }
 
-        if(command === 'join') {
+        if(command === 'gb-create') {
             const user = msg.author.tag;
             console.log(`${user} sent a message.`);
 
+            msg.channel.reply('You have been added to the database. Use !gb-add to add a game.');
+
             db.save(user);
         }
+        if(command === 'gb-add') {
+            console.log(`Adding game.`);
+
+            const query = args.join(' ');
+
+            lib.add(msg.author.tag, query);
+        }
+
+        
     }
         
 }
