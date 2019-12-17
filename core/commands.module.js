@@ -49,10 +49,11 @@ module.exports = {
                 .addField('User Reviews', developers.results.number_of_user_reviews, true)
                 .addField('GiantBomb Review', review, true);
             msg.channel.send(embed).then(message =>{
-                message.react('👍');
-                message.react('👎');
-                message.react('💓');
-                message.react('😠');
+                message.react('👍')
+                    .then(() => message.react('👎'))
+                    .then(() => message.react('💓'))
+                    .then(() => message.react('😠'))
+                    .catch(() => console.log('Reaction Error'));
             });
         }
         if(command === 'gbr') {
