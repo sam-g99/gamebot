@@ -30,13 +30,8 @@ module.exports = {
         const query = User.find({name: username});
         const promise = query.exec();
         const data = promise.then((res) =>{
-            return res;
+            console.log(res);
         });
-
-        console.log(`From DB: ${data}`);
-
-
-        return data;
 
         
 
