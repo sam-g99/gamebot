@@ -49,6 +49,7 @@ module.exports = {
                 .addField('User Reviews', developers.results.number_of_user_reviews, true)
                 .addField('GiantBomb Review', review, true);
             msg.channel.send(embed);
+            msg.delete();
             msg.react('👍');
             msg.react('👎');
         }
