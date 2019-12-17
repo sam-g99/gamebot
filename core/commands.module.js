@@ -95,9 +95,7 @@ module.exports = {
         if(command === 'gb-share') {
             const library = lib.share(msg.author.username);
 
-            library.forEach((e) =>{
-                msg.channel.send(e.title);
-            });
+            msg.channel.send(library);
 
             
         }
