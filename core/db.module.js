@@ -36,9 +36,10 @@ module.exports = {
             res.forEach((e) =>{
                 library = e.library;
             });
-            console.log(library);
             
         });
+        console.log(library);
+
         
         return library;
         
