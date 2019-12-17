@@ -27,12 +27,15 @@ module.exports = {
         });
     },
     fetchLib: (username) =>{
+        let library;
         const query = User.find({name: username});
         const promise = query.exec();
         promise.then((res) =>{
             console.log(res);
+            library = res.library;
         });
-        //return promise;
+        
+        return library;
         
     },
     lib: (username, library) =>{
