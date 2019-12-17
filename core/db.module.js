@@ -27,21 +27,22 @@ module.exports = {
         });
     },
     fetchLib: (username) =>{
-        let library;
         const query = User.find({name: username});
         const promise = query.exec();
-        promise.then((res) =>{
+        const lib = promise.then((res) =>{
             console.log(res);
 
             res.forEach((e) =>{
-                library = e.library;
+                return e.library
             });
             
         });
-        console.log(library);
+
+        console.log(lib);
+        
 
         
-        return library;
+        return lib;
         
     },
     lib: (username, library) =>{
