@@ -38,7 +38,7 @@ module.exports = {
             
         });
 
-        //console.log(lib);
+        console.log(lib);
         
         return lib;
         
