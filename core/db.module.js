@@ -34,8 +34,8 @@ module.exports = {
                 return e.library;
             });
         });
-        console.log(data);
-        return data;
+        console.log(await data);
+        return await data;
 
         
 
