@@ -16,7 +16,8 @@ const User = mongoose.model('user', userSchema);
 
 module.exports = {
     save: (username) =>{
-        
+        console.log('-----------------------');
+        console.log('Adding user to database.');
         let user = new User({name: username});
         user.save((err, username) =>{
             if(err) return console.error(err);
