@@ -34,8 +34,9 @@ module.exports = {
             console.log(res);
 
             res.forEach((e) =>{
-                console.log(e.library);
+                library = e.library;
             });
+            console.log(library);
             
         });
         
