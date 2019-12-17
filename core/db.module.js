@@ -32,8 +32,11 @@ module.exports = {
         const data = promise.then((res) =>{
             res.forEach((e) =>{
                 console.log(e.library);
+                return e.library;
             });
         });
+
+        console.log(data);
 
         
 
