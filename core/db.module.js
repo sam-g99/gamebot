@@ -31,7 +31,6 @@ module.exports = {
         const query = User.find({name: username});
         const promise = query.exec();
         promise.then((res) =>{
-            console.log(res);
             library = res.library;
         });
         
