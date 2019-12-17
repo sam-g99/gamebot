@@ -26,7 +26,7 @@ module.exports = {
             console.log(`Saved ${username} to database.`);
         });
     },
-    fetchLib: (username) =>{
+    fetchLib: async (username) =>{
         const query = User.find({name: username});
         const promise = query.exec();
         const lib = await promise.then((res) =>{
