@@ -1,4 +1,6 @@
-const api = require('./api.module.js');
+const api = require('./api.module.js'),
+db = require('./db.module.js'),
+lib = require('./library.module.js');
 
 const colors = [
     'f5ad42',
@@ -69,9 +71,47 @@ module.exports = {
                 .setDescription('Quickly search a few databases to find everything you need to know about a specific video game.')
                 .addField('General Information', '!gb [query]', true)
                 .addField('Reviews & Ratings', '!gb-r [query]', true)
-                .addField('Clips & Videos', '!gb-v [query]', true);
+                .addField('Clips & Videos', '!gb-v [query]', true)
+                .addField('Create Library', '!gb-create', true)
+                .addField('Add to Library', '!gb-add [query]', true)
+                .addField('Share Library', '!gb-share', true);
             msg.channel.send(embed);
         }
+
+        if(command === 'gb-create') {
+            const user = msg.author.username;
+            console.log(`${user} sent a message.`);
+
+            msg.channel.send('You have been added to the database. Use !gb-add to add a game.');
+
+            db.save(user);
+        }
+        if(command === 'gb-add') {
+            console.log(`Adding game.`);
+
+            const query = args.join(' ');
+
+            lib.add(msg.author.username, query);
+            msg.channel.send(`${query.toUpperCase()} has been added to your library.`);
+        }
+
+        if(command === 'gb-share') {
+            const library = await lib.share(msg.author.username);
+
+            const games = [];
+
+            library.forEach(e => games.push(e.title));
+
+            const embed = new RichEmbed()
+                .setTitle(`${msg.author.username}'s Library`)
+                .setColor(randColors(colors))
+                .addField(`Games`, games.join('\n'), true);
+           
+            msg.channel.send(embed);
+
+        }
+
+        
     }
         
 }

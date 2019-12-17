@@ -5,7 +5,8 @@ prefix = process.env.PREFIX,
 api = require('./core/api.module.js'),
 express = require('express'), //used for the fancy redirect
 app = express(),
-cmd = require('./core/commands.module.js');
+cmd = require('./core/commands.module.js'),
+utlity = require('./utliity/awken.module.js');
 
 app.use(express.static('public'));
 
@@ -26,9 +27,17 @@ client.on('message', async msg =>{
     
 });
 
+client.on('guildMemberAdd', member =>{
+    console.log(`${member.user.username} has joined.`)
+});
 client.login(process.env.TOKEN);
 
 app.listen(process.env.PORT || 3000, (err) =>{
     if(err) console.log(err);
     console.log(`Listening for redirect`);
 });
+
+//bypass herokus shitty policy for putting apps to sleep due to inactivity
+setInterval(() =>{
+    utlity.keepawake();
+}, 60000);
