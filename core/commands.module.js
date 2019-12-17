@@ -94,9 +94,10 @@ module.exports = {
 
         if(command === 'gb-share') {
             const library = await lib.share(msg.author.username);
+            const json = JSON.parse(library);
            
 
-            msg.channel.send(library);
+            msg.channel.send(json.name);
 
         }
 
