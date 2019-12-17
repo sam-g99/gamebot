@@ -48,7 +48,10 @@ module.exports = {
                 .addBlankField()
                 .addField('User Reviews', developers.results.number_of_user_reviews, true)
                 .addField('GiantBomb Review', review, true);
-            msg.channel.send(embed);
+            msg.channel.send(embed).then(message =>{
+                message.react('👍');
+                message.react('👎');
+            });
         }
         if(command === 'gbr') {
             const color = randColors(colors);
@@ -61,10 +64,7 @@ module.exports = {
                 .addField('Review Count', rawg.results[0].reviews_count, true)
                 .addField('Score', Math.round(rawg.results[0].score), true)
                 .addField('Rating', `${rawg.results[0].rating}/5`, true);
-            msg.channel.send(embed).then((message) =>{
-                message.react('👍');
-                message.react('👎');
-            });
+            msg.channel.send(embed);
            
         }
         if(command === 'gbhelp' || command === 'gbh') {
