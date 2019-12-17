@@ -27,11 +27,9 @@ module.exports = {
         });
     },
     fetchLib: async (username) =>{
-        const query = User.findOne({name: username});
-        const promise = query.exec();
-        promise.then((res) =>{
-            console.log(res);
-        });
+        const query = (await User.findOne({name: username})).select('library').lean().exec();
+        console.log(query);
+        
 
         
 
