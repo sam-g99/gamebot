@@ -33,7 +33,11 @@ module.exports = {
             //console.log(res);
 
             res.forEach((e) =>{
-                return e.library
+                e.library.forEach((i) =>{
+                    let library = [];
+                    library.push(i);
+                    return library;
+                });
             });
             
         });
