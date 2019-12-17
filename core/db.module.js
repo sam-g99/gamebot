@@ -32,6 +32,9 @@ module.exports = {
         const promise = query.exec();
         promise.then((res) =>{
             console.log(res);
+            res.forEach((e) =>{
+                library = e.library;
+            });
         });
         
         return library;
