@@ -4,8 +4,9 @@ api = require('./api.module.js');
 
 module.exports = {
     add: async (username, query) =>{
-        let data = await db.fetchLib(username);
-        console.log(await JSON.parse(data));
+        let data = db.fetchLib(username);
+        console.log(data);
+        
         let library = [];
 
         console.log(data);

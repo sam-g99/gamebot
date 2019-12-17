@@ -27,8 +27,10 @@ module.exports = {
         });
     },
     fetchLib: (username) =>{
-        const data = User.find({name: username});
+        const data = User.find({name: username}).exec();
+
         return data;
+        
     },
     lib: (username, library) =>{
         User.update({name: username}, {
