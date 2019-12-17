@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const uri = `mongodb+srv://gamebot:XmqJ4rsTxRKdWodR@flustercuck-qelop.gcp.mongodb.net/test?retryWrites=true&w=majority`
 
-mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true, useMongoClient: true}); //FIXME: "MongoNetworkError" (see error log)
+mongoose.connect(uri); //FIXME: "MongoNetworkError" (see error log)
 
 const db = mongoose.connection;
 
