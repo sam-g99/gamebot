@@ -13,7 +13,6 @@ module.exports = {
         //console.log(data);
 
         const res = await api.search(query);
-        const json = await res.json();
 
         const game = {
             title: res.results[0].name,
