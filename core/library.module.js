@@ -22,5 +22,13 @@ module.exports = {
         library.push(game);
         
         db.lib(username, library);
+    },
+    share: (username) =>{
+        let data = await db.fetchLib(username);
+        let library = data.library;
+
+        library.forEach((e) =>{
+            console.log(e.title);
+        });
     }
 }

@@ -31,12 +31,7 @@ module.exports = {
         console.log(query);
 
         return query;
-        
-
-        
-
-    
-                
+               
     },
     lib: (username, library) =>{
         User.update({name: username}, {

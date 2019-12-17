@@ -89,6 +89,11 @@ module.exports = {
             const query = args.join(' ');
 
             lib.add(msg.author.username, query);
+            msg.channel.send(`${query.toUpperCase()} has been added to your library.`);
+        }
+
+        if(command === 'gb-share') {
+            msg.channel.send('Check the console.'); 
         }
 
         
