@@ -31,7 +31,11 @@ module.exports = {
         const query = User.find({name: username});
         const promise = query.exec();
         promise.then((res) =>{
-            library = res.library;
+            res.forEach((e) =>{
+                if(e.name === username) {
+                    library = e.library;
+                }
+            });
         });
         
         return library;
