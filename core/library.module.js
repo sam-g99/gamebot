@@ -27,8 +27,6 @@ module.exports = {
         let data = await db.fetchLib(username);
         let library = data.library;
 
-        library.forEach((e) =>{
-            console.log(e.title);
-        });
+        return library;
     }
 }

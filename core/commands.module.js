@@ -93,8 +93,13 @@ module.exports = {
         }
 
         if(command === 'gb-share') {
-            msg.channel.send('Check the console.'); 
-            lib.share(msg.author.username);
+            const library = lib.share(msg.author.username);
+
+            library.forEach((e) =>{
+                msg.channel.send(e.title);
+            });
+
+            
         }
 
         
