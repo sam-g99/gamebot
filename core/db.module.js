@@ -27,9 +27,12 @@ module.exports = {
         });
     },
     fetchLib: (username) =>{
-        const data = User.find({name: username}).exec();
-
-        return data;
+        const query = User.find({name: username});
+        const promise = query.exec();
+        promise.then((res) =>{
+            console.log(res);
+        });
+        //return promise;
         
     },
     lib: (username, library) =>{
