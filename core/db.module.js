@@ -28,15 +28,19 @@ module.exports = {
     },
     fetchLib: async (username) =>{
         const query = User.find({name: username});
-        const promise = query.exec((err, res) =>{
-            if(err) return console.log('Failed to get data');
-            res.forEach((e) =>{
-                return e.library;
-            });
-        });;
+        const promise = query.exec();
+        const data = promise.then((res) =>{
+            return res;
+        });
+
+        console.log(`From DB: ${data}`);
+
+
+        return data;
+
         
 
-        console.log(promise);
+    
                 
     },
     lib: (username, library) =>{
