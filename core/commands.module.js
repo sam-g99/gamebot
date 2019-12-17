@@ -96,7 +96,7 @@ module.exports = {
             const library = await lib.share(msg.author.username);
 
             library.forEach((e) =>{
-                console.log(e.name);
+                console.log(e.title);
             });
            
 
