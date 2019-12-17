@@ -9,12 +9,11 @@ module.exports = {
         console.log(data);
 
         const res = await api.search(query);
-        console.log(res);
         //const json = await res.json();
 
         const game = {
-            title: json.results[0].name,
-            image: json.results[0].image.small_url
+            title: res.results[0].name,
+            image: res.results[0].image.small_url
         };
 
         library.push(game);
