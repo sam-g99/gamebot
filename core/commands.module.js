@@ -61,7 +61,10 @@ module.exports = {
                 .addField('Review Count', rawg.results[0].reviews_count, true)
                 .addField('Score', Math.round(rawg.results[0].score), true)
                 .addField('Rating', `${rawg.results[0].rating}/5`, true);
-            msg.channel.send(embed);
+            msg.channel.send(embed).then(sentEmbed =>{
+                sentEmbed.react('👍');
+                sentEmbed.react('👎');
+            });
            
         }
         if(command === 'gbhelp' || command === 'gbh') {
