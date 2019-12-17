@@ -20,6 +20,6 @@ module.exports = {
             image: res.results[0].image.small_url
         };
         
-        db.lib(username, data);
+        //db.lib(username, data);
     }
 }
