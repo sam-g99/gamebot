@@ -97,7 +97,7 @@ module.exports = {
             const json = library.stringify();
            
 
-            msg.channel.send(json);
+            msg.channel.send(json.name);
 
         }
 
