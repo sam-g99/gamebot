@@ -17,11 +17,11 @@ module.exports = {
             if(library[i].title.indexOf(game.title) >= 0) {
                 console.log('game already exists.');
                 break;
-            } else {
-                library.push(game);
-        
-                db.lib(username, library);
-            }
+            }  
+            library.push(game);
+    
+            db.lib(username, library);
+            
         }
 
         
