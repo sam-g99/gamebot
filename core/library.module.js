@@ -28,9 +28,7 @@ module.exports = {
         let library = data.library;
         const res = await api.search(query);
 
-        for(let i = 0; i < library.length; i++) {
-            console.log(library[i].name);
-        }
+        console.log(library);
 
         return library;
 
