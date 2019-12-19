@@ -26,7 +26,7 @@ module.exports = {
         };
 
         for(let i = 0; i < library.length; i++) {
-            if(libray[i].title.indexOf(game.title)) {
+            if(library[i].title.indexOf(game.title)) {
                 return;
             } else {
                 library.push(game);
