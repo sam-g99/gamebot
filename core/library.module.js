@@ -40,8 +40,10 @@ module.exports = {
         let library = data.library;
         const res = await api.search(query);
 
+        const title = res.results[0].name;
+
         for(let i = 0; i < library.length; i++) {
-            if(library[i].title.indexOf(query) >= 0) {
+            if(library[i].title.indexOf(title) >= 0) {
                 library.splice(i, 1);
             }
         }
