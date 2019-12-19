@@ -29,7 +29,7 @@ module.exports = {
         const res = await api.search(query);
 
         for(let i = 0; i < library.length; i++) {
-            if(library[i].title.contains(query)) {
+            if(library[0].title.indexOf(query) >= 0) {
                 library.splice(i, 1);
             }
         }
