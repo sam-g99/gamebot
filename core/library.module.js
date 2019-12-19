@@ -8,6 +8,18 @@ module.exports = {
         let library = data.library;
         const res = await api.search(query);
 
+        //FIXME: fix the ability to add the same game more than once
+        /*
+            example solution
+            if(library.indexOf(query) => 0)
+            {
+                msg.channel.send('Hey bro, looks like you already have that game in your library.');
+                return;
+            } else {
+                    db.lib(username, library);
+            }
+        */
+
         const game = {
             title: res.results[0].name,
             image: res.results[0].image.small_url
@@ -29,7 +41,7 @@ module.exports = {
         const res = await api.search(query);
 
         for(let i = 0; i < library.length; i++) {
-            if(library[0].title.indexOf(query) >= 0) {
+            if(library[i].title.indexOf(query) >= 0) {
                 library.splice(i, 1);
             }
         }
