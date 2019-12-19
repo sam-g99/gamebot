@@ -27,7 +27,7 @@ module.exports = {
 
         for(let i = 0; i < library.length; i++) {
             if(library[i].title.indexOf(game.title)) {
-                return;
+                console.log('game already exists.');
             } else {
                 library.push(game);
         
