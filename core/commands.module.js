@@ -102,6 +102,14 @@ module.exports = {
             msg.channel.send(`${query.toUpperCase()} has been added to your library.`);
         }
 
+        if(command === 'gb-remove' || command === 'gb-delete' || command === 'gb-del' || command === 'gb-rm') {
+            const query = args.join(' ');
+
+
+            lib.remove(msg.author.username, query);
+            msg.channel.send(`${query.toUpperCase()} has been removed from your library.`);
+        }
+
         if(command === 'gb-share') {
             const library = await lib.share(msg.author.username);
 

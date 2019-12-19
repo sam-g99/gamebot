@@ -22,5 +22,20 @@ module.exports = {
         let library = data.library;
 
         return library;
+    },
+    remove: async (username, query) =>{
+        let data = await db.fetchLib(username);
+        let library = data.library;
+        const res = await api.search(query);
+
+        for(let i = 0; i < library.length; i++) {
+            if(library[i].name.contains(query)) {
+                library.splice(i, 1);
+            }
+        }
+
+        return library;
+
+        
     }
 }
