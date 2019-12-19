@@ -34,7 +34,8 @@ module.exports = {
             }
         }
 
-        return library;
+        db.lib(username, library);
+
 
         
     }
