@@ -1,77 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<script
-			src="https://kit.fontawesome.com/94f76db31f.js"
-			crossorigin="anonymous"
-		></script>
-		<script src="js/client.js"></script>
-		<link
-			href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="css/style.css" />
-		<title>Game Bot</title>
-		<!--<i class="fab fa-github"></i>-->
-		<!--<i class="fab fa-discord"></i>-->
-	</head>
-	<body>
-		<div class="main-container">
-			<section class="top">
-				<header>
-					<h1>GAME BOT</h1>
-					<p>A SIMPLE BOT FOR GAMERS.</p>
-					<div class="main-buttons">
-						<button id="join-server" class="btn primary">
-							<i class="fab fa-discord"></i>
-							<span>Join The Discord</span>
-						</button>
-						<a
-							id="discord"
-							class="btn primary github"
-							href="https://github.com/aboxofsox/gamebot"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<i class="fab fa-github"></i>
-							<span>Contribute</span>
-						</a>
-					</div>
-				</header>
-			</section>
-			<section class="bottom">
-				<div class="features">
-					<h3>Features</h3>
-					<hr />
-					<div class="feature-section">
-						<div class="card">
-							<h4>GiantBomb API</h4>
-							<p>
-								Plug into the GiantBomb API to retrieve game
-								information.
-							</p>
-						</div>
-						<div class="card">
-							<h4>Reviews & Ratings</h4>
-							<p>
-								See what other gamers think about a specific
-								game title.
-							</p>
-						</div>
-						<div class="card">
-							<h4>Videos & Clips</h4>
-							<p>
-								Get clips and videos of your favorite game and
-								share them with your server.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<footer></footer>
-		</div>
-	</body>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/94f76db31f.js" crossorigin="anonymous"></script>
+    <script src="js/client.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Game Bot</title>
+    <!--GitHub Icon
+        <i class="fab fa-github"></i>-->
+
+    <!--Disccord Icon
+        <i class="fab fa-discord"></i>-->
+</head>
+<body>
+    <section class="top">
+        <header>
+            <div class="header-text">
+                <h1>Game Bot</h1>
+                <h1>A simple bot for gaming.</h1>
+            </div>
+            <div class="call-to-action">
+                <button id="join-server" class="btn primary">
+                    <i class="fab fa-discord"></i>
+                    Add to Server
+                </button>
+                <button class="btn secondary" id="contribute">
+                    <i class="fab fa-github"></i>
+                    Contribute
+                </button>
+            </div>
+        </header>
+        <div class="right">
+            <img src="/images/arcade.png" alt="" class="logo">
+        </div>
+    </section>
+    <section class="bottom">
+        <div class="features">
+            <h3>Features</h3>
+            <hr/>
+            <div class="feature-section">
+                <div class="card">
+                    <i class="fas fa-database"></i>
+                    <h4>GiantBomb API</h4>
+                    <p>Plug into the GiantBomb API to retrieve game information.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-clipboard"></i>
+                    <h4>Reviews & Ratings</h4>
+                    <p>See what other gamers think about a specific game title.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-photo-video"></i>
+                    <h4>Videos & Clips</h4>
+                    <p>Get clips and videos of your favorite game and share them with your server.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 </html>

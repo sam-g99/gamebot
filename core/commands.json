@@ -1,0 +1,38 @@
+{
+    "Info" : {
+        "command" : "!gb",
+        "function" : "Return video game information based on query input."
+    },
+    "Reviews_and_Ratings" : {
+        "command" : "!gbr",
+        "function" : "Return reviews and ratings from RAWG API"
+    },
+    "Clips" :  {
+        "command" : "!gbv",
+        "function" : "Return a few clips from the RAWG API."
+    },
+    "Help" : {
+        "command" : ["!gbh", "!gbhelp"],
+        "function" : "Return a list of available commands."
+    },
+    "Testing" : {
+        "command" : "!join",
+        "function" : "Test client.member object."
+    },
+    "Create Game Library" : {
+        "command" : "!gb-create",
+        "function" : "Adds user to database for game library creation."
+    },
+    "Share Game Library" : {
+        "command" : "!gb-share",
+        "function" : "Shares the user's game library."
+    },
+    "Add Game to Library": {
+        "command" : "!gb-add",
+        "function" : "Adds a game to the user's library."
+    },
+    "Update Favorite Game" : {
+        "command" : "!gb-fave",
+        "function" : "Adds a favorite game for the user."
+    }
+}
