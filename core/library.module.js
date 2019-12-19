@@ -13,23 +13,17 @@ module.exports = {
             image: res.results[0].image.small_url
         };
 
-        //FIXME: need to break out of the for loop once a result returns true, or false. however the check is written. probably best to check for false rather than true.
+        
+        const included = (library => library.title.includes(game.title));
+        const gameExist = library.some(included);
 
-        for(let i = 0; i < library.length; i++) {
-            if(library[i].title.indexOf(game.title) >= 0) {
-                console.log('game already exists.');
-            }  
+        if(gameExist){
+            console.log('game already exist');
+        }else {
+            console.log('adding game library');
             library.push(game);
-    
             db.lib(username, library);
-            
         }
-
-        
-
-        
-
-        
     },
     share: async (username) =>{
         let data = await db.fetchLib(username);
