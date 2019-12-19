@@ -20,14 +20,26 @@ module.exports = {
             }
         */
 
-        const game = {
+       const game = {
             title: res.results[0].name,
             image: res.results[0].image.small_url
         };
 
-        library.push(game);
+        for(let i = 0; i < library.length; i++) {
+            if(libray[i].title.indexOf(game.title)) {
+                return;
+            } else {
+                library.push(game);
         
-        db.lib(username, library);
+                db.lib(username, library);
+            }
+        }
+
+        
+
+        
+
+        
     },
     share: async (username) =>{
         let data = await db.fetchLib(username);
