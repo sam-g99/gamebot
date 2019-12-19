@@ -29,9 +29,7 @@ module.exports = {
         const res = await api.search(query);
 
         for(let i = 0; i < library.length; i++) {
-            if(library[i].name.indexOf(query)) {
-                library.splice(i, 1);
-            }
+            console.log(library[i].name);
         }
 
         return library;
