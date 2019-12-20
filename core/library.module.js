@@ -9,6 +9,7 @@ module.exports = {
         const res = await api.search(query);
 
        const game = {
+        const game = {
             title: res.results[0].name,
             image: res.results[0].image.small_url
         };
@@ -24,6 +25,10 @@ module.exports = {
             library.push(game);
             db.lib(username, library);
         }
+
+        library.push(game);
+        
+        db.lib(username, library);
     },
     share: async (username) =>{
         let data = await db.fetchLib(username);
