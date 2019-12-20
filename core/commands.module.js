@@ -102,6 +102,15 @@ module.exports = {
             msg.channel.send(`${query.toUpperCase()} has been added to your library.`);
         }
 
+        if(command === 'gb-remove') {
+            console.log('Removing game...');
+
+            const query = args.join(' ');
+
+            lib.remove(msg.author.username, query);
+            msg.channel.send(`${query.toUpperCase()} has been removed from your library.`);
+        }
+
         if(command === 'gb-share') {
             const library = await lib.share(msg.author.username);
 
@@ -116,9 +125,7 @@ module.exports = {
            
             msg.channel.send(embed);
 
-        }
-
-        
+        }        
     }
         
 }
