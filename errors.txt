@@ -1,5 +1,0 @@
-(node:23) UnhandledPromiseRejectionWarning: MongoTimeoutError: Server selection timed out after 30000 ms
-2019-12-16T20:57:50.594957+00:00 app[web.1]: at Timeout._onTimeout (/app/node_modules/mongodb/lib/core/sdam/server_selection.js:308:9)
-2019-12-16T20:57:50.594960+00:00 app[web.1]: at listOnTimeout (internal/timers.js:531:17)
-2019-12-16T20:57:50.594962+00:00 app[web.1]: at processTimers (internal/timers.js:475:7)
-2019-12-16T20:57:50.595183+00:00 app[web.1]: (node:23) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
