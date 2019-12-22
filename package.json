@@ -5,12 +5,13 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node app.js"
+    "start": "node app.js"
   },
   "author": "aboxofsox",
   "license": "ISC",
   "dependencies": {
     "apicalypse": "^0.1.6",
+    "body-parser": "^1.19.0",
     "deepmerge": "^4.2.2",
     "discord.js": "^11.5.1",
     "express": "^4.17.1",

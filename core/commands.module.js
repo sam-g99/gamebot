@@ -121,7 +121,8 @@ module.exports = {
             const embed = new RichEmbed()
                 .setTitle(`${msg.author.username}'s Library`)
                 .setColor(randColors(colors))
-                .addField(`Games`, games.join('\n'), true);
+                .addField(`Games`, games.join('\n'), true)
+                .addField('Test Library', `https://dscrd-gm-bot.herokuapp.com/user?username=${msg.author.username}`, false);
            
             msg.channel.send(embed);
 

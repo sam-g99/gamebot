@@ -6,9 +6,15 @@ api = require('./core/api.module.js'),
 express = require('express'), //used for the fancy redirect
 app = express(),
 cmd = require('./core/commands.module.js'),
-utlity = require('./utliity/awken.module.js');
+utlity = require('./utliity/awken.module.js'),
+db = require('./core/db.module.js'),
+bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use(express.static('public'));
+app.use(express.static('user'));
 
 app.get('/', (req, res) =>{
     if(fs.readFileSync(`${__dirname}/redirect.html`)) {
@@ -33,6 +39,36 @@ client.on('message', async msg =>{
     }
     
 });
+
+app.get('/user', async (req, res) =>{
+    res.sendFile(`${__dirname}/user/index.html`);
+    const username = req.query.username;
+
+    console.log(username);
+});
+
+app.get('/query', async (req, res) =>{
+    const username = req.query.username;
+    const data = await db.fetchLib(username);
+
+    res.json(data);
+
+});
+
+async function buildLib(res, username) {
+    const data = await db.fetchLib(username);
+    res.send(data);
+
+}
+
+/*app.get('/user?username=:username', async (req, res) => {
+    console.log(req.query.username);
+    console.log('hello');
+    res.send('hello');
+    /*const username = req.params.username;
+    const data = await db.fetchLib(username);
+    res.json(data);
+});*/
 
 client.on('guildMemberAdd', member =>{
     console.log(`${member.user.username} has joined.`)
