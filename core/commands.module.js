@@ -122,7 +122,7 @@ module.exports = {
                 .setTitle(`${msg.author.username}'s Library`)
                 .setColor(randColors(colors))
                 .addField(`Games`, list.join('\n'), true)
-                .addField('Link', `https://dscrd-gm-bot.herokuapp.com/user?username=${username}`, false);
+                .addField('See More', `https://dscrd-gm-bot.herokuapp.com/user?username=${username}`, false);
            
             msg.channel.send(embed);
 
