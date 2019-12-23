@@ -8,7 +8,6 @@ window.addEventListener('load', async () =>{
 
     const res = await fetch(`https://dscrd-gm-bot.herokuapp.com/query?username=${user}`);
     const json = await res.json();
-    console.log(json);
 
     json.library.forEach((g) =>{
         game(g, document.querySelector('.library'));
