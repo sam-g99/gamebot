@@ -74,4 +74,4 @@ app.listen(process.env.PORT || 3000, (err) =>{
 //bypass herokus shitty policy for putting apps to sleep due to inactivity
 setInterval(() =>{
     utlity.keepawake();
-}, 60000);
+}, 120000);
