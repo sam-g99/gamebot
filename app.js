@@ -48,7 +48,7 @@ app.get('/user', async (req, res) =>{
 });
 
 app.get('/query', async (req, res) =>{
-    const username = req.query.username;
+    const username = decodeURIComponent(req.query.username);
     const data = await db.fetchLib(username);
 
     res.json(data);

@@ -113,6 +113,7 @@ module.exports = {
 
         if(command === 'gb-share') {
             const library = await lib.share(msg.author.username);
+            const username = encodeURIComponent(msg.author.username);
 
             const games = [];
 
@@ -122,7 +123,7 @@ module.exports = {
                 .setTitle(`${msg.author.username}'s Library`)
                 .setColor(randColors(colors))
                 .addField(`Games`, games.join('\n'), true)
-                .addField('Test Library', `https://dscrd-gm-bot.herokuapp.com/user?username=${msg.author.username}`, false);
+                .addField('Test Library', `https://dscrd-gm-bot.herokuapp.com/user?username=${username}`, false);
            
             msg.channel.send(embed);
 
