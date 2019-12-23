@@ -116,11 +116,13 @@ module.exports = {
 
             library.forEach(e => games.push(e.title));
 
+            const list = games.splice(0,5);
+
             const embed = new RichEmbed()
                 .setTitle(`${msg.author.username}'s Library`)
                 .setColor(randColors(colors))
-                .addField(`Games`, games.join('\n'), true)
-                .addField('Test Library', `https://dscrd-gm-bot.herokuapp.com/user?username=${username}`, false);
+                .addField(`Games`, list.join('\n'), true)
+                .addField('Link', `https://dscrd-gm-bot.herokuapp.com/user?username=${username}`, false);
            
             msg.channel.send(embed);
 
