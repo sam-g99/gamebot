@@ -102,6 +102,15 @@ module.exports = {
             msg.channel.send(`${query.toUpperCase()} has been added to your library.`);
         }
 
+        if(command === 'gb-remove') {
+            console.log('Removing game...');
+
+            const query = args.join(' ');
+
+            lib.remove(msg.author.username, query);
+            msg.channel.send(`${query.toUpperCase()} has been removed from your library.`);
+        }
+
         if(command === 'gb-share') {
             const library = await lib.share(msg.author.username);
 
@@ -112,13 +121,12 @@ module.exports = {
             const embed = new RichEmbed()
                 .setTitle(`${msg.author.username}'s Library`)
                 .setColor(randColors(colors))
-                .addField(`Games`, games.join('\n'), true);
+                .addField(`Games`, games.join('\n'), true)
+                .addField('Test Library', `https://dscrd-gm-bot.herokuapp.com/user?username=${msg.author.username}`, false);
            
             msg.channel.send(embed);
 
-        }
-
-        
+        }        
     }
         
 }
