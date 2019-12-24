@@ -19,6 +19,19 @@ app.use(express.static('user'));
 app.get('/', (req, res) =>{
     res.sendFile(`${__dirname}/redirect.html`);
 });
+app.get('/user', async (req, res) =>{
+    res.sendFile(`${__dirname}/user/index.html`);
+    const username = req.query.username;
+
+    console.log(username);
+});
+app.get('/query', async (req, res) =>{
+    const username = decodeURIComponent(req.query.username);
+    const data = await db.fetchLib(username);
+
+    res.json(data);
+
+});
 
 client.on('ready', () =>{
     console.log(`Logged on as ${client.user.tag}`);
@@ -35,22 +48,6 @@ client.on('message', async msg =>{
     }
     
 });
-
-app.get('/user', async (req, res) =>{
-    res.sendFile(`${__dirname}/user/index.html`);
-    const username = req.query.username;
-
-    console.log(username);
-});
-
-app.get('/query', async (req, res) =>{
-    const username = decodeURIComponent(req.query.username);
-    const data = await db.fetchLib(username);
-
-    res.json(data);
-
-});
-
 async function buildLib(res, username) {
     const data = await db.fetchLib(username);
     res.send(data);
