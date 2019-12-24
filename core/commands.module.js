@@ -78,7 +78,7 @@ module.exports = {
                 .addField('Clips & Videos', '!gbv [query]', true)
                 .addField('Create Library', '!gb-create', true)
                 .addField('Add to Library', '!gb-add [query]', true)
-                .addField('Remove from Library', '!gb-remove')
+                .addField('Remove from Library', '!gb-remove', true)
                 .addField('Share Library', '!gb-share', true);
             msg.channel.send(embed);
         }
