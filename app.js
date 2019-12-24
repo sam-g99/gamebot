@@ -17,11 +17,7 @@ app.use(express.static('public'));
 app.use(express.static('user'));
 
 app.get('/', (req, res) =>{
-    if(fs.readFileSync(`${__dirname}/redirect.html`)) {
-        res.sendFile(`${__dirname}/redirect.html`);
-    } else {
-        res.status(404).res.send(`404 Error. Page not found`);
-    }
+    res.sendFile(`${__dirname}/redirect.html`);
 });
 
 client.on('ready', () =>{
@@ -40,12 +36,12 @@ client.on('message', async msg =>{
     
 });
 
-/*app.get('/user', async (req, res) =>{
+app.get('/user', async (req, res) =>{
     res.sendFile(`${__dirname}/user/index.html`);
     const username = req.query.username;
 
     console.log(username);
-});*/
+});
 
 app.get('/query', async (req, res) =>{
     const username = decodeURIComponent(req.query.username);
