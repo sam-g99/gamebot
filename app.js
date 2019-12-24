@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(express.static('user'));
 
-app.get('/', (req, res) =>{
+app.get('', (req, res) =>{
     res.sendFile(`${__dirname}/user/redirect.html`);
 });
 /*app.get('/user', async (req, res) =>{
