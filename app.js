@@ -10,13 +10,13 @@ utlity = require('./utliity/awken.module.js'),
 db = require('./core/db.module.js'),
 bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static('public'));
 app.use(express.static('user'));
 
-app.get('*', (req, res) =>{
+app.get('/', (req, res) =>{
     res.sendFile(`${__dirname}/user/redirect.html`);
 });
 app.get('/user', async (req, res) =>{
