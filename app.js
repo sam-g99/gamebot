@@ -40,12 +40,12 @@ client.on('message', async msg =>{
     
 });
 
-app.get('/user', async (req, res) =>{
+/*app.get('/user', async (req, res) =>{
     res.sendFile(`${__dirname}/user/index.html`);
     const username = req.query.username;
 
     console.log(username);
-});
+});*/
 
 app.get('/query', async (req, res) =>{
     const username = decodeURIComponent(req.query.username);
