@@ -20,9 +20,6 @@ const randColors = (colors) =>{
 }
 
 module.exports = {
-    /*
-        If you add a command, add it to "commands.json"
-    */
     command: async (client, msg, prefix, RichEmbed) =>{
         if(msg.content.indexOf(prefix) !== 0) return;
 
@@ -77,10 +74,11 @@ module.exports = {
                 .setColor(color)
                 .setDescription('Quickly search a few databases to find everything you need to know about a specific video game.')
                 .addField('General Information', '!gb [query]', true)
-                .addField('Reviews & Ratings', '!gb-r [query]', true)
-                .addField('Clips & Videos', '!gb-v [query]', true)
+                .addField('Reviews & Ratings', '!gbr [query]', true)
+                .addField('Clips & Videos', '!gbv [query]', true)
                 .addField('Create Library', '!gb-create', true)
                 .addField('Add to Library', '!gb-add [query]', true)
+                .addField('Remove from Library', '!gb-remove', true)
                 .addField('Share Library', '!gb-share', true);
             msg.channel.send(embed);
         }
@@ -113,16 +111,19 @@ module.exports = {
 
         if(command === 'gb-share') {
             const library = await lib.share(msg.author.username);
+            const username = encodeURIComponent(msg.author.username);
 
             const games = [];
 
             library.forEach(e => games.push(e.title));
 
+            const list = games.splice(0,5);
+
             const embed = new RichEmbed()
                 .setTitle(`${msg.author.username}'s Library`)
                 .setColor(randColors(colors))
-                .addField(`Games`, games.join('\n'), true)
-                .addField('Test Library', `https://dscrd-gm-bot.herokuapp.com/user?username=${msg.author.username}`, false);
+                .addField(`Games`, list.join('\n'), true)
+                .addField('See More', `https://dscrd-gm-bot.herokuapp.com/user?username=${username}`, false);
            
             msg.channel.send(embed);
 

@@ -48,7 +48,7 @@ app.get('/user', async (req, res) =>{
 });
 
 app.get('/query', async (req, res) =>{
-    const username = req.query.username;
+    const username = decodeURIComponent(req.query.username);
     const data = await db.fetchLib(username);
 
     res.json(data);
@@ -61,15 +61,6 @@ async function buildLib(res, username) {
 
 }
 
-/*app.get('/user?username=:username', async (req, res) => {
-    console.log(req.query.username);
-    console.log('hello');
-    res.send('hello');
-    /*const username = req.params.username;
-    const data = await db.fetchLib(username);
-    res.json(data);
-});*/
-
 client.on('guildMemberAdd', member =>{
     console.log(`${member.user.username} has joined.`)
 });
@@ -77,10 +68,10 @@ client.login(process.env.TOKEN);
 
 app.listen(process.env.PORT || 3000, (err) =>{
     if(err) console.log(err);
-    console.log(`Listening for redirect`);
+    console.log(`|Server Started|`);
 });
 
 //bypass herokus shitty policy for putting apps to sleep due to inactivity
 setInterval(() =>{
     utlity.keepawake();
-}, 60000);
+}, 120000);
