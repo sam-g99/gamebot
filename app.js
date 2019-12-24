@@ -19,7 +19,7 @@ app.use(express.static('user'));
 app.get('/', (req, res) =>{
     res.sendFile(`${__dirname}/user/redirect.html`);
 });
-app.get('/user', async (req, res) =>{
+/*app.get('/user', async (req, res) =>{
     res.sendFile(`${__dirname}/user/index.html`);
     const username = req.query.username;
 
@@ -31,7 +31,7 @@ app.get('/query', async (req, res) =>{
 
     res.json(data);
 
-});
+});*/
 
 client.on('ready', () =>{
     console.log(`Logged on as ${client.user.tag}`);
