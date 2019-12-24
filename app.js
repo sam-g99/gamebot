@@ -17,7 +17,7 @@ app.use(express.static('public'));
 app.use(express.static('user'));
 
 app.get('/', (req, res) =>{
-    res.sendFile(`${__dirname}/redirect.html`);
+    res.sendFile(`${__dirname}/user/redirect.html`);
 });
 app.get('/user', async (req, res) =>{
     res.sendFile(`${__dirname}/user/index.html`);
