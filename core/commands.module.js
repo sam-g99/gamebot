@@ -74,10 +74,11 @@ module.exports = {
                 .setColor(color)
                 .setDescription('Quickly search a few databases to find everything you need to know about a specific video game.')
                 .addField('General Information', '!gb [query]', true)
-                .addField('Reviews & Ratings', '!gb-r [query]', true)
-                .addField('Clips & Videos', '!gb-v [query]', true)
+                .addField('Reviews & Ratings', '!gbr [query]', true)
+                .addField('Clips & Videos', '!gbv [query]', true)
                 .addField('Create Library', '!gb-create', true)
                 .addField('Add to Library', '!gb-add [query]', true)
+                .addField('Remove from Library', '!gb-remove')
                 .addField('Share Library', '!gb-share', true);
             msg.channel.send(embed);
         }
