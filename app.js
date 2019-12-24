@@ -17,10 +17,10 @@ app.use(express.static('public'));
 app.use(express.static('user'));
 
 app.get('/', async (req, res) =>{
-    res.sendFile(`${__dirname}/redirect.html`);
+    res.sendFile(`${__dirname}/index.html`);
 });
 app.get('/user', async (req, res) =>{
-    res.sendFile(`${__dirname}/user/index.html`);
+    res.sendFile(`${__dirname}/user/library.html`);
     const username = req.query.username;
 
     console.log(username);
