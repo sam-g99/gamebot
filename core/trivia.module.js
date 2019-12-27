@@ -7,7 +7,13 @@ module.exports = {
     draw: (username, guess) =>{
         let rand = Math.floor(Math.random() * qs.questions.length);
 
-        console.log(qs);
+        let question = {
+            q: qs.questions[rand].q,
+            a: qs.questions[rand].a
+        };
+
+        console.log(question);
+
 
     }
 }
