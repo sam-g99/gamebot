@@ -1,0 +1,44 @@
+{
+    "Questions" : [
+        {
+            "q" : "Which actor and comedian voices Jasper in Fable III?",
+            "a" : "John Cleese"
+        },
+        {
+            "q" : "Introduced in Mario Kart 64 and a staple of the series since, which controversial projectile targets the race leader?",
+            "a" : "The Blue Shell"
+        },
+        {
+            "q" : "Which open-world survival game is set on the fictional planet 4546B?",
+            "a" : "Subnautiica"
+        },
+        {
+            "q" : "Game Boy's launch title Alleyway was a close of which classic 1976 Atari arcade game?",
+            "a" : "Breakout"
+        },
+        {
+            "q" : "Geral of Rivia appears as a playable character in which 2018 fighting game?",
+            "a": "Soulcalibur VI"
+        },
+        {
+            "q" : "What are the nicknames for the four Pac-Man ghosts?",
+            "a" : "Blink, Pinky, Inky, and Clyde"
+        },
+        {
+            "q" : "What is the name of the main playable character in the Metro series?",
+            "a" : "Artyom"
+        },
+        {
+            "q" : "In the 1997 game Oddworld: Abe's Oddysee, who is the CEO of RuptureFarms?",
+            "a" : "Mollukc the Glukkon"
+        },
+        {
+            "q" : "Which studio was the developer of the 2018 game Spider-Man?",
+            "a" : "Insomniac Games"
+        },
+        {
+            "q" : "In the multiplayer fo Nintendo 64's classic GoldenEye 007, which weapon is famed for its ability to defeat an opponent with a single shot?",
+            "a" : "Golden Gun"
+        }
+    ]
+}

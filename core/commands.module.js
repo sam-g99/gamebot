@@ -1,6 +1,7 @@
 const api = require('./api.module.js'),
 db = require('./db.module.js'),
-lib = require('./library.module.js');
+lib = require('./library.module.js'),
+trivia = require('./trivia.module.js');
 
 const colors = [
     'f5ad42',
@@ -126,8 +127,18 @@ module.exports = {
                 .addField('See More', `https://dscrd-gm-bot.herokuapp.com/user?username=${username}`, false);
            
             msg.channel.send(embed);
-
         }        
+        if(command === 'gb-trivia') {
+            const guess = args.join(' ');
+            let question = trivia.draw(msg.author.username, guess.toUpperCase);
+
+            const embed = new RichEmbed()
+                .setTitle('Trivia!')
+                .setColor(randColors(colors))
+                .setField('Question', question.q)
+                .setField('Answer', question.a);
+            msg.channel.send(embed);
+        }
     }
         
 }
