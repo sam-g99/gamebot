@@ -39,6 +39,42 @@
         {
             "q" : "In the multiplayer fo Nintendo 64's classic GoldenEye 007, which weapon is famed for its ability to defeat an opponent with a single shot?",
             "a" : "Golden Gun"
+        },
+        {
+            "q" : "In the point-and-click adventure game Beneath a Steel Sky, what is the name of Robert Foster's robot companion?",
+            "a" : "Joey"
+        },
+        {
+            "q" : "What is the name of the witch in Banjo-Kazooie, responsible for the kidnapping of Banjo's sister, Tooty?",
+            "a" : "Gruntilda"
+        },
+        {
+            "q" : "Which science fiction-themed Japanese role-playing game series is developed by Tri-Ace?",
+            "a" : "Star Ocean"
+        },
+        {
+            "q" : "In the 1986 arcade game Out Run, what type of car does the player control?",
+            "a" : "Ferrari Testarossa Spider"
+        },
+        {
+            "q" : "Released by Nintendo, what is the name of the cardboard interactive toy line compatible with the Nintendo Switch console?",
+            "a" : "Nintendo Labo"
+        },
+        {
+            "q" : "What is the name of the undead protagonist of the 1998 game MediEvil?",
+            "a" : "Sir Daniel Fortesque"
+        },
+        {
+            "q" : "Which video game is set at Bullworth Academy?",
+            "a" : "Bully"
+        },
+        {
+            "q" : "Released for the Sega CD peripheral to the Mega Drive in 1992, which full motion video game has the player protect Kelli Medd, and others, using traps and security cameras?",
+            "a" : "Night Trap"
+        },
+        {
+            "q" : "What is the name of the South Park role-playing game that was released in 2014?",
+            "a" : "South Park: The Stick of Truth"
         }
     ]
 }
