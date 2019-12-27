@@ -1,5 +1,5 @@
 const fs = require('fs'),
-file = fs.readFileSync(`${__dirname}/core/questions.json`),
+file = fs.readFileSync(`${__dirname}/questions.json`),
 qs = JSON.parse(file);
 
 
