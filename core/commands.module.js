@@ -130,7 +130,7 @@ module.exports = {
         }        
         if(command === 'gb-trivia') {
             const guess = args.join(' ');
-            let question = trivia.draw(msg.author.username, guess.toUpperCase);
+            let question = trivia.draw();
 
             const embed = new RichEmbed()
                 .setTitle('Trivia!')

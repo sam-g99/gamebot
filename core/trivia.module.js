@@ -4,7 +4,7 @@ qs = JSON.parse(file);
 
 
 module.exports = {
-    draw: (username, guess) =>{
+    draw: () =>{
         let rand = Math.floor(Math.random() * qs.questions.length);
 
         let question = {
@@ -13,6 +13,8 @@ module.exports = {
         };
 
         console.log(question);
+
+        return question;
 
 
     }
