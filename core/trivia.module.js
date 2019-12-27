@@ -1,6 +1,6 @@
 const fs = require('fs'),
-file = fs.readFileSync('/questions.json'),
-qs = file.questions;
+file = fs.readFileSync('./questions.json'),
+qs = JSON.parse(file);
 
 
 module.exports = {
