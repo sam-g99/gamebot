@@ -135,8 +135,8 @@ module.exports = {
             const embed = new RichEmbed()
                 .setTitle('Trivia!')
                 .setColor(randColors(colors))
-                .setField('Question', question.q)
-                .setField('Answer', question.a);
+                .addield('Question', question.q)
+                .addField('Answer', question.a);
             msg.channel.send(embed);
         }
     }
