@@ -74,5 +74,33 @@
     {
         "question" : "What is the name of the South Park role-playing game that was released in 2014?",
         "answers" : "South Park: The Stick of Truth"
+    },
+    {
+        "question" : "What is the first zone called in the 1991 game Sonic the Hedgehog?",
+        "answers" : "Green Hill Zone"
+    },
+    {
+        "question" : "A spin-off from Undertale, the first chapter of which video game had a surprise launch in October 2018?",
+        "answers" : "Deltarune"
+    },
+    {
+        "question" : "In Theme Hospital, who do sufferes of the disease King Comples impersonate?",
+        "answers" : "Elvis Presley"
+    },
+    {
+        "question" : "In which 2003 video game does the player control Jade, a photojournalist in the year 2435?",
+        "answers" : "Beyond Good & Evil"
+    },
+    {
+        "question" : "Devloped by id Software and released in 1992, which video game is sometimes credited with being the original first person shooter; or at least the game that popularized the genre?",
+        "answers" : "Wolfenstein 3D"
+    },
+    {
+        "question" : "In the Dragon Age series, who is Morrigan's mother?",
+        "answers" : "Flemeth"
+    },
+    {
+        "question" : "What is the name of the evil alien atangonist in EarthBound?",
+        "answers" : "Giygas"
     }
 ]
