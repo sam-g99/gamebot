@@ -80,7 +80,8 @@ module.exports = {
                 .addField('Create Library', '!gb-create', true)
                 .addField('Add to Library', '!gb-add [query]', true)
                 .addField('Remove from Library', '!gb-remove', true)
-                .addField('Share Library', '!gb-share', true);
+                .addField('Share Library', '!gb-share', true)
+                .addField('Trivia!', '!gb-trivia', true);
             msg.channel.send(embed);
         }
 
