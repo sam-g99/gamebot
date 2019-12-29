@@ -136,7 +136,7 @@ module.exports = {
             }
 
             msg.channel.send(item.question).then(() =>{
-                msg.channel.awaitMessage(filter, {maxMatches: 1, time: 30000, errors: ['Time!']})
+                msg.channel.awaitMessages(filter, {maxMatches: 1, time: 30000, errors: ['Time!']})
                     .then(collected =>{
                         msg.channel.send(`${collected.first().authro} got the right answer!`);
                     })
