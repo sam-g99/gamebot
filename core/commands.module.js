@@ -132,7 +132,7 @@ module.exports = {
             const quiz = require('./questions.json');
             const item = quiz[Math.floor(Math.random() * quiz.length)];
             const filter = response => {
-                return item.answers.toLowerCase === response.content.toLowerCase();
+                return item.answers.toLowerCase() === response.content.toLowerCase();
             }
 
             msg.channel.send(item.question).then(() =>{
