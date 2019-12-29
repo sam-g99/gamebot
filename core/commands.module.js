@@ -138,7 +138,7 @@ module.exports = {
             msg.channel.send(item.question).then(() =>{
                 msg.channel.awaitMessages(filter, {maxMatches: 1, time: 30000, errors: ['Time!']})
                     .then(collected =>{
-                        msg.channel.send(`${collected.first().authro} got the right answer!`);
+                        msg.channel.send(`${collected.first().author} got the right answer!`);
                     })
                     .catch(collected =>{
                         msg.channel.send('Looks like nobody got the answer right');
