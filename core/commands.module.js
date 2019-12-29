@@ -129,15 +129,21 @@ module.exports = {
             msg.channel.send(embed);
         }        
         if(command === 'gb-trivia') {
-            const guess = args.join(' ');
-            let question = trivia.draw();
+            const quiz = require('./questions.json');
+            const item = quiz[Math.floor(Math.random() * quiz.length)];
+            const filter = response => {
+                return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
+            }
 
-            const embed = new RichEmbed()
-                .setTitle('Trivia!')
-                .setColor(randColors(colors))
-                .addField('Question', question.q)
-                .addField('Answer', question.a);
-            msg.channel.send(embed);
+            msg.channel.send(item.question).then(() =>{
+                msg.channel.awaitMessage(filter, {maxMatches: 1, time: 30000, errors: ['Time!']})
+                    .then(collected =>{
+                        msg.channel.send(`${collected.first().authro} got the right answer!`);
+                    })
+                    .catch(collected =>{
+                        msg.channel.send('Looks like nobody got the answer right');
+                    });
+            });
         }
     }
         
