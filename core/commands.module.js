@@ -49,7 +49,7 @@ module.exports = {
             msg.channel.send(embed).then(message =>{
                 message.react('👍')
                     .then(() => message.react('👎'))
-                    .then(() => message.react('💓'))
+                    .then(() => message.react('💖'))
                     .then(() => message.react('😠'))
                     .catch(() => console.log('Reaction Error'));
             });
