@@ -1,6 +1,7 @@
 const api = require('./api.module.js'),
 db = require('./db.module.js'),
-lib = require('./library.module.js');
+lib = require('./library.module.js'),
+trivia = require('./trivia.module.js');
 
 const colors = [
     'f5ad42',
@@ -48,7 +49,7 @@ module.exports = {
             msg.channel.send(embed).then(message =>{
                 message.react('👍')
                     .then(() => message.react('👎'))
-                    .then(() => message.react('💓'))
+                    .then(() => message.react('💖'))
                     .then(() => message.react('😠'))
                     .catch(() => console.log('Reaction Error'));
             });
@@ -79,7 +80,8 @@ module.exports = {
                 .addField('Create Library', '!gb-create', true)
                 .addField('Add to Library', '!gb-add [query]', true)
                 .addField('Remove from Library', '!gb-remove', true)
-                .addField('Share Library', '!gb-share', true);
+                .addField('Share Library', '!gb-share', true)
+                .addField('Trivia!', '!gb-trivia', true);
             msg.channel.send(embed);
         }
 
@@ -126,8 +128,25 @@ module.exports = {
                 .addField('See More', `https://dscrd-gm-bot.herokuapp.com/user?username=${username}`, false);
            
             msg.channel.send(embed);
-
         }        
+        if(command === 'gb-trivia') {
+            const quiz = require('./questions.json');
+            const item = quiz[Math.floor(Math.random() * quiz.length)];
+            const filter = response => {
+                return item.answers.toLowerCase() === response.content.toLowerCase();
+            }
+
+            msg.channel.send(item.question).then(() =>{
+                console.log(filter);
+                msg.channel.awaitMessages(filter, {maxMatches: 1, time: 30000, errors: ['time']})
+                    .then(collected =>{
+                        msg.channel.send(`${collected.first().author} got the right answer!`);
+                    })
+                    .catch(collected =>{
+                        msg.channel.send('Looks like nobody got the answer right');
+                    });
+            });
+        }
     }
         
 }
